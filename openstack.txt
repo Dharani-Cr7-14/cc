@@ -1,0 +1,10 @@
+su
+sudo apt-get update
+sudo apt-get upgrade
+sudo snap install microstack --beta
+snap list microstack
+sudo microstack init --auto --control
+microstack.openstack --version
+sudo snap get microstack config.credentials.keystone-password
+exit
+microstack launch cirros -n myvm
